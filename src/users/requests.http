@@ -3,6 +3,25 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "ghaniha@kim.com",
-    "password": "121211213"
+    "email": "232323@kim.com",
+    "password": "fsfsdfsdf"
 }
+
+### Get a user
+GET http://localhost:3000/auth/6
+
+
+### Get all users with same emails
+GET http://localhost:3000/auth?email=airfan@kim.com
+
+### Update a user
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "email": "suriye@google.com",
+    "password": "fjsaklfj"
+}
+
+### remove a user 
+DELETE http://localhost:3000/auth/5
