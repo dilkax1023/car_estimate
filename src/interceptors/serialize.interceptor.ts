@@ -8,8 +8,12 @@ import { plainToClass } from 'class-transformer';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+interface ClassConstructor {
+  new (...args: any[]): {};
+}
+
 // wraper decorator
-export const Serialize = (dto: any) => {
+export const Serialize = (dto: ClassConstructor) => {
   return UseInterceptors(new SerializeInterceptor(dto));
 };
 

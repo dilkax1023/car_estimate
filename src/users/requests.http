@@ -3,12 +3,31 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "232323@kim.com",
-    "password": "fsfsdfsdf"
+    "email": "test@test.com",
+    "password": "12345"
 }
+
+
+### Sign in an existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "12345"
+}
+
+### Sign out an user
+POST http://localhost:3000/auth/signout
+
+
+
+### Currently signed in users
+Get http://localhost:3000/auth/whoami
 
 ### Get a user
 GET http://localhost:3000/auth/6
+
 
 
 ### Get all users with same emails
